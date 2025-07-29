@@ -18,7 +18,7 @@ const deployContracts = async () => {
 describe("Counter Contract Tests", () => {
     it("Should initialize count to 0", async () => {
         const { counter } = await loadFixture(deployContracts);
-        expect(await counter.count()).to.equal(0);
+        expect(await counter.getCount()).to.equal(0);
     });
 
     it("Should allow owner to set count", async () => {
